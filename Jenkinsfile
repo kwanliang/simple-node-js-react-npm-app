@@ -25,7 +25,7 @@ pipeline {
         stage('Dependency Check'){
             steps {
                 echo 'Initializing OWASP Dependency Check'
-                dependencyCheck additionalArguments: --format HTML --format XML odcInstallation: 'dep'
+                dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'dep'
             }
             
             post {
